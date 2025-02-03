@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe6e6;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #valentineButton {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #valentineButton:hover {
+            background-color: #ff3333;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+        }
+        .heart {
+            color: #ff4d4d;
+            font-size: 50px;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="valentineButton">Click Me!</button>
+        <div id="message">
+            <div class="heart">❤️</div>
+            <h1>Will you be my Valentine?</h1>
+            <p>I love you more than all the stars in the sky!</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('valentineButton').addEventListener('click', function() {
+            this.style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+
